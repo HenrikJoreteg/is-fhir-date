@@ -2,11 +2,13 @@
 
 ![](https://img.shields.io/npm/dm/is-fhir-date.svg)![](https://img.shields.io/npm/v/is-fhir-date.svg)![](https://img.shields.io/npm/l/is-fhir-date.svg)
 
-Single purpose module exporting a single function that says whether a given string is a valid FHIR `date` type as per: https://www.hl7.org/fhir/datatypes.html#date _and_ also checks it for validity.
+Tiny module that determines if a given given string is a valid FHIR `date` type as per: https://www.hl7.org/fhir/datatypes.html#date _and_ also checks it for validity.
 
 The FHIR spec only specifies a regexp format, it does not check them for validity.
 
-For example, the following will all pass the regexp but are invalid:
+This module confirms **both** format and validity.
+
+For example, the following will all pass the regexp but should _not_ be considered valid because they're not valid dates:
 
 ```
 '2021-02-29' // this is not a leap year
