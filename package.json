@@ -1,0 +1,56 @@
+{
+  "name": "is-fhir-date",
+  "description": "Determines if a given string is a valid FHIR `date` _and_ also checks it for validity.",
+  "version": "0.0.0",
+  "author": "Henrik Joreteg <henrik@joreteg.com>",
+  "bugs": {
+    "url": "https://github.com/henrikjoreteg/is-fhir-date"
+  },
+  "devDependencies": {
+    "eslint": "7.19.0",
+    "eslint-plugin-jsdoc": "32.2.0",
+    "esm": "3.2.25",
+    "fixpack": "4.0.0",
+    "prettier": "2.2.1",
+    "prettier-plugin-jsdoc": "0.3.13",
+    "rollup": "2.41.1",
+    "tap-spec": "5.0.0",
+    "tape": "5.1.1"
+  },
+  "exports": {
+    "import": "./src/is-fhir-date.js",
+    "require": "./dist/index.js"
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "homepage": "https://github.com/henrikjoreteg/is-fhir-date",
+  "keywords": [
+    "date",
+    "fhir"
+  ],
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./src/is-fhir-date.js",
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "jsxSingleQuote": true,
+    "arrowParens": "avoid",
+    "jsdocParser": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/henrikjoreteg/is-fhir-date.git"
+  },
+  "scripts": {
+    "build": "rollup src/is-fhir-date.js --file dist/index.js --format cjs",
+    "ci": "npm run static && npm test",
+    "format": "prettier --write .",
+    "lint": "eslint ./src .",
+    "prepublishOnly": "npm run ci && npm run build",
+    "static": "fixpack && npm run format && npm run lint",
+    "test": "tape -r esm src/**/*.spec.js | tap-spec"
+  }
+}
