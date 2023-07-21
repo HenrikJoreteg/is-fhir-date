@@ -1,7 +1,7 @@
 {
   "name": "is-fhir-date",
   "description": "Determines if a given string is a valid FHIR `date` _and_ also checks it for validity.",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Henrik Joreteg <henrik@joreteg.com>",
   "bugs": {
     "url": "https://github.com/henrikjoreteg/is-fhir-date"
