@@ -32,4 +32,5 @@ const dateRegexp = /^([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]
  * @param {string} stringToTest
  * @returns {boolean}
  */
-export default val => dateRegexp.test(val || '') && isPossibleDate(val)
+export default stringToTest =>
+  dateRegexp.test(stringToTest || '') && isPossibleDate(stringToTest)

@@ -30,6 +30,8 @@ const tests = [
 
 test('isFhirDate', t => {
   tests.forEach(([input, output]) => {
+    // Ignore ts check here because we're testing invalid input
+    // @ts-ignore
     t.equal(isFhirDate(input), output, `in: ${input} should be ${output}`)
   })
   t.end()
