@@ -43,11 +43,12 @@ npm test
 
 ## Change log
 
+- `1.0.1`: Internal typechecking improvements, no functional change.
 - `1.0.0`: First public release.
 
 ## credits
 
-If you like this follow [@HenrikJoreteg](http://twitter.com/henrikjoreteg) on twitter. This was built for and is in use in: [AnesthesiaCharting.com](https://anesthesiacharting.com).
+If you like this follow [@HenrikJoreteg](http://twitter.com/henrikjoreteg) on twitter. This was built for and is in use in: [Xchart.com](https://xchart.com).
 
 ## license
 
